@@ -1,6 +1,8 @@
 WP Cleanup and Basic Functions
 ==============================
 
+*Forked from https://github.com/g-kanoufi/wp-cleanup-and-basic-functions*
+
 Head section cleanup and many usual custom settings used on every website setup as images settings and sizes, privacy, and basic admin customizations
 
 Description
