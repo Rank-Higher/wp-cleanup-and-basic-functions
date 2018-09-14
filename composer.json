@@ -1,0 +1,7 @@
+{
+    "name": "rankhigher/wp-cleanup-and-basic-functions",
+    "description": "A plugin that performs basic cleanup and add some functionality to Wordpress.",
+    "type": "wordpress-plugin",
+    "version": "1.0.0"
+}
+  
