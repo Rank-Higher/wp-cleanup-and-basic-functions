@@ -66,4 +66,20 @@ function run_wp_cbf() {
 	$plugin->run();
 
 }
+
+/**
+ * Prevent update notification for plugin
+ * http://www.thecreativedev.com/disable-updates-for-specific-plugin-in-wordpress/
+ * Place in theme functions.php or at bottom of wp-config.php
+ */
+function disable_plugin_updates( $value ) {
+	if ( isset($value) && is_object($value) ) {
+	  if ( isset( $value->response['wp-cleanup-and-basic-functions/wp-cbf.php'] ) ) {
+		unset( $value->response['wp-cleanup-and-basic-functions/wp-cbf.php'] );
+	  }
+	}
+	return $value;
+}
+add_filter( 'site_transient_update_plugins', 'disable_plugin_updates' );
+
 run_wp_cbf();
